@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capitalized</title>
+</head>
+<body>
+    <h1>Capitalized</h1>
+
+    <h2> Welcome,
+        <span th:if = "${username != null}" th:text = "${username}"></span>
+        <span th:if = "${username == null}"> user </span>!
+    </h2>
+
+    <p> <span th:text = "${text}"></span></p>
+</body>
+</html>
