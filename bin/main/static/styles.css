@@ -1,0 +1,13 @@
+* {
+  font-family: sans-serif;
+  background-color: rgb(175, 173, 173);
+
+}
+
+body {
+  background-image: "/Pebble Stream.jpg";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-position: 50%;
+}
