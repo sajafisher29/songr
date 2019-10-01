@@ -1,11 +1,11 @@
 package com.fellowscode.fishersarah.songr;
 
 public class Album {
-    private String title;
-    private String artist;
-    private int songCount;
-    private int length; //in seconds
-    private String imageUrl;
+    public String title;
+    public String artist;
+    public int songCount;
+    public int length; //in seconds
+    public String imageUrl;
 
     Album(String title, String artist, int songCount, int length, String imageUrl) {
         this.title = title;
