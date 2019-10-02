@@ -1,6 +1,6 @@
 package com.fellowscode.fishersarah.songr;
 
-import org.junit.Before;
+import com.fellowscode.fishersarah.songr.models.Album;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

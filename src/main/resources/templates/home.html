@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link href = "/styles.css" rel = "stylesheet"/>
     <title>Home</title>
 </head>
+
 <body>
-    <h1> Welcome to the Songr WebApp!</h1>
+
+    <h1> Welcome to the Songr WebApp
+        <span th:if = "${username != null}" th:text = "${username}"></span>
+        <span th:if = "${username == null}">user</span>
+        !</h1>
+
+    <form action = "/albums" method = "POST">
+        <input type = "text" name = "title"> title
+        <input type = "text" name = "artist"> artist
+        <input type = "number" name = "songCount"> songCount
+        <input type = "number" name = "length"> length
+        <input type = "text" name = "imageUrl"> imageUrl
+        <input type = "submit" value = "Add album">
+    </form>
+
 </body>
+
 </html>
