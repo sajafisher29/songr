@@ -7,9 +7,6 @@ Setting up a basic webapp that will be used for five labs.
 ## Setup
 1) Use the Spring Initializr to create a new application with artifact songr with Web and Thymeleaf (and optionally Devtools) dependencies. Download the zip file and extract the directory it contains. Add the course gitignore file into that directory. Run git init, git add ., and git commit -m "initial commit from Spring init". Create a new GitHub repo, and push your initial commit to your master branch there. Then, check out a new branch to begin your work for the day.
 2) Continue working in the same songr webapp you generated for the previous lab. Ensure that you have all of these dependencies in your build.gradle. (Note that when you add the dependencies on postgres and JPA, your app will stop working until you have the configuration in application.properties to access your Postgres database.)
-3)
-4)
-5)
 
 ````
 dependencies {
@@ -21,8 +18,12 @@ dependencies {
 }
 ````
 
+3)
+4)
+5)
+
 ## Deployment Instructions
-Launching the application's server works best from IntelliJ. Both ./gradlew bootRun and gradle bootRun start doing all the good things... and then gets stuck at 75%.
+Launching the application's server works best from IntelliJ. Both ./gradlew bootRun and gradle bootRun start doing all the good things... and then gets stuck at 75% but don't worry! The server is running and the site and database are functioning. This is documented as a 'known issue'.
 
 ### Contribute
 No contribution guidelines at this point. 
