@@ -1,13 +1,28 @@
 # Code 401 Lab 11: Building Full-Stack Web Apps
+# Code 401 Lab 12: Spring and REST
 
 ## Overview
-Setting up a basic webapp that will be used for the next five labs.
+Setting up a basic webapp that will be used for five labs.
 
 ## Setup
-Use the Spring Initializr to create a new application with artifact songr with Web and Thymeleaf (and optionally Devtools) dependencies. Download the zip file and extract the directory it contains. Add the course gitignore file into that directory. Run git init, git add ., and git commit -m "initial commit from Spring init". Create a new GitHub repo, and push your initial commit to your master branch there. Then, check out a new branch to begin your work for the day.
+1) Use the Spring Initializr to create a new application with artifact songr with Web and Thymeleaf (and optionally Devtools) dependencies. Download the zip file and extract the directory it contains. Add the course gitignore file into that directory. Run git init, git add ., and git commit -m "initial commit from Spring init". Create a new GitHub repo, and push your initial commit to your master branch there. Then, check out a new branch to begin your work for the day.
+2) Continue working in the same songr webapp you generated for the previous lab. Ensure that you have all of these dependencies in your build.gradle. (Note that when you add the dependencies on postgres and JPA, your app will stop working until you have the configuration in application.properties to access your Postgres database.)
+3)
+4)
+5)
 
-## Deployment
-TBD
+````
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	runtimeOnly('org.postgresql:postgresql')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+````
+
+## Deployment Instructions
+Launching the application's server works best from IntelliJ. Both ./gradlew bootRun and gradle bootRun start doing all the good things... and then gets stuck at 75%.
 
 ### Contribute
 No contribution guidelines at this point. 
@@ -33,7 +48,7 @@ None at this point
 - We will create a safe environment where everyone feels comfortable speaking up by following our code of conduct and keeping each other accountable.
 
 ### Project Scope
-#### Feature Tasks
+#### Feature Tasks Day 1
 Consider basic application setup. What classes should be created? How should they be related?
 
 1) Ensure that you can run the Spring app.
@@ -44,11 +59,21 @@ Consider basic application setup. What classes should be created? How should the
 7) An Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl that is a link to that album’s art.
 8) Create a route at /albums that shows three album instances. (These will be hardcoded for today’s lab; create an array that contains three albums, and then display those three on the page.)
 
-#### Stretch
+#### Stretch Day 1
 1) Modify your /hello route to allow users to specify their name with a query parameter, like /hello?name=Joe, and get a custom hello message back.
 2) Modify your /hello route to expect a POST request instead of a GET request. Use Postman for manual testing.
 3) Create a route that takes in a number, and then makes a request to the Numbers API to get a fact about that number. Return the fact.
 4) Create a route that tells the user information about their computer. For example, it might tell them what browser they’re using, what OS they’re using, what their IP address is, and other such information. (Hint: This information is in the headers of the request that comes in to the server, so you may want to look at the request headers.)
+
+#### Feature Tasks Day 2
+1) Update your Album model so that it can be saved in a database.
+* An Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl that is a link to that album’s art.
+2) A user should be able to see information about all the albums on the site.
+3) A user should be able to add albums to the site.
+
+#### Stretch Day 2
+1) A user should be able to update information about albums on the site.
+2) A user should be able to delete albums on the site.
 
 ## Code style
 Code style is Java, Spring, ThymeLeaf
@@ -60,8 +85,13 @@ None at this point
 None at this point
 
 ## Tests
-No tests at this time. 
+Day 1) No tests at this time. 
 * Need to test the constructor, getters, and setters for the Album class.
+Day 2) Integration testing will be covered in future lectures. Visually ensures that each route is working. Not required to write any tests for this lab.
+* Make sure server fails gracefully. The server shouldn’t crash and the database shouldn’t be corrupted in any way if a user attempts to read or manipulate information that doesn’t exist.
+Day 3)
+Day 4)
+Day 5)
 
 ## Credits
 * Java 401 Instructional Team
