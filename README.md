@@ -1,5 +1,6 @@
 # Code 401 Lab 11: Building Full-Stack Web Apps
 # Code 401 Lab 12: Spring and REST
+# Code 401 Lab 13: Related Resources and Integration Testing
 
 ## Overview
 Setting up a basic webapp that will be used for five labs.
@@ -17,8 +18,7 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 ````
-
-3)
+3) Continue working in the same repository.
 4)
 5)
 
@@ -76,6 +76,20 @@ Consider basic application setup. What classes should be created? How should the
 1) A user should be able to update information about albums on the site.
 2) A user should be able to delete albums on the site.
 
+#### Feature Tasks Day 3
+1) Create a Song model.
+* A Song has a title, a length (in seconds), a trackNumber, and the album on which that song appears.
+* Ensure that the relationship between Albums and Songs is appropriately set up.
+2) A user should be able to see information about all the songs on the site.
+3) A user should be able to view a page with data about one particular album.
+4) A user should be able to add songs to an album.
+5) A user should be able to see the songs that belong to an album when looking at that album.
+
+#### Stretch Day 3
+1) A user should be able to update information about songs on the site.
+2) A user should be able to delete songs on the site.
+3) A user should be able to delete albums on the site, and when they do, all associated songs should also be deleted.
+
 ## Code style
 Code style is Java, Spring, ThymeLeaf
 
@@ -90,7 +104,9 @@ Day 1) No tests at this time.
 * Need to test the constructor, getters, and setters for the Album class.
 Day 2) Integration testing will be covered in future lectures. Visually ensures that each route is working. Not required to write any tests for this lab.
 * Make sure server fails gracefully. The server shouldn’t crash and the database shouldn’t be corrupted in any way if a user attempts to read or manipulate information that doesn’t exist.
-Day 3)
+Day 3) Write integration tests for your hello world routes.
+* As a stretch goal, add integration testing for the routes you’ve created today.
+* Make sure your server fails gracefully. The server shouldn’t crash and the database shouldn’t be corrupted in any way if a user attempts to read or manipulate information that doesn’t exist.
 Day 4)
 Day 5)
 

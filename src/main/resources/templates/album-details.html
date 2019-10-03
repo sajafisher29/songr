@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href = "/styles.css" rel = "stylesheet"/>
+    <title>Songs</title>
+</head>
+
+<body>
+
+<h1>Album Details: Songs</h1>
+
+<ul>
+    <li th:each = "song : ${album}" th:class = "${song.title}">
+        <span th:text = "${song}"></span>
+        <form method = "POST" action = "/albums/delete">
+            <input type = "hidden" th:value = "${album.id}" name = "id">
+            <button>Delete this album</button>
+        </form>
+        <form method = "POST" action = "/songs">
+            <input type = "hidden" th:value = "${album.id}" name = "id">
+            <input type = "text" name = "song">
+            <button>Add song</button>
+        </form>
+        <form method = "POST" action = "/songs/delete">
+            <input type = "hidden" th:value = "${song.id}" name = "id">
+            <button>Delete this song</button>
+        </form>
+    </li>
+</ul>
+
+</body>
+
+</html>

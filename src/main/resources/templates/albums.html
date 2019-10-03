@@ -12,7 +12,14 @@
     <h1>Albums</h1>
 
     <ul>
-        <li th:each = "album : ${albums}" th:text = "${album}" th:class = "${album.title}"></li>
+        <li th:each = "album : ${albums}" th:class = "${album.title}">
+            <span th:text = "${album}"></span>
+            <a th:href = "'/albums/'+${album.id}">See details</a>
+<!--            <form method = "GET" action = "/album/{id}">-->
+<!--                <input type = "hidden" th:value = "${album.id}" name = "id">-->
+<!--                <button>Delete this album</button>-->
+<!--            </form>-->
+        </li>
     </ul>
 
 </body>
